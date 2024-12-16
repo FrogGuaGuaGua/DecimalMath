@@ -58,7 +58,7 @@ namespace DecimalExTests.DecimalExTests
                                           Debug.WriteLine("Sqrt({0})={1}", i, DecimalEx.Sqrt(i));
                                           reset.Set();
                                       });
-                Assert.IsTrue(reset.WaitOne(30000));
+                Assert.That(reset.WaitOne(30000),Is.True);
 
                 step *= 1.01m;
                 try { i += step; }

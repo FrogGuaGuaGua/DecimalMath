@@ -10,8 +10,8 @@ namespace Decimal2DTests
         public void TestConstructor(int x, int y)
         {
             var p = new Point2D(x, y);
-            Assert.AreEqual(p.X, x);
-            Assert.AreEqual(p.Y, y);
+            Assert.That(p.X, Is.EqualTo(x));
+            Assert.That(p.Y, Is.EqualTo(y));
         }
 
         [TestCase(0, 3, true)]
@@ -37,7 +37,7 @@ namespace Decimal2DTests
         public void TestQuadrantOnAxis(int x, int y)
         {
             var p = new Point2D(x, y);
-            Assert.Throws<Exception>(() => {var q = p.Quadrant;});
+            Assert.Throws<Exception>(() => { var q = p.Quadrant; });
         }
 
         [TestCase("0", "3", "0", "3", "0")]
@@ -47,7 +47,7 @@ namespace Decimal2DTests
         {
             var p1 = new Point2D(Convert.ToDecimal(x1), Convert.ToDecimal(y1));
             var p2 = new Point2D(Convert.ToDecimal(x2), Convert.ToDecimal(y2));
-            Assert.AreEqual(p1.DistanceTo(p2), Convert.ToDecimal(distance));
+            Assert.That(p1.DistanceTo(p2), Is.EqualTo(Convert.ToDecimal(distance)));
         }
     }
 }

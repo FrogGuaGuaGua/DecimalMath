@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Description>Portable math support for Decimal-based geometric and trigonometric calculations.</Description>
     <Authors>Nathan P Jones</Authors>
     <PackageId>DecimalMath.Decimal2D</PackageId>
